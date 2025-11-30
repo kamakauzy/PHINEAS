@@ -60,7 +60,7 @@ chmod +x tools/install/install_tools.sh
 
 ---
 
-## 🎮 Usage (Easier Than Building a Rollercoaster)
+## Usage (Easier Than Building a Rollercoaster)
 
 ### Quick Start - Auto-Magic Detection
 
@@ -198,9 +198,9 @@ MasterOsint/
 
 ---
 
-## 🎨 Features (More Than Just a Backyard Attraction)
+## Features (More Than Just a Backyard Attraction)
 
-### ✨ What Makes PHINEAS Special
+### What Makes PHINEAS Special
 
 1. **100% Free** - No paid services. Mom doesn't even need to know.
 2. **Auto-Detection** - Smarter than Candace's bust-catching strategies
@@ -225,7 +225,7 @@ MasterOsint/
 
 ---
 
-## 📊 Output Format (More Structured Than Summer Vacation Plans)
+## Output Format (More Structured Than Summer Vacation Plans)
 
 Results save to `./phineas-results/` as timestamped JSON files:
 
@@ -269,7 +269,7 @@ Results save to `./phineas-results/` as timestamped JSON files:
 
 ---
 
-## 🔧 Advanced Usage (For When You Go Full Ferb)
+## Advanced Usage (For When You Go Full Ferb)
 
 ### Custom Workflows
 Create your own in `workflows/`:
@@ -336,7 +336,7 @@ This is **completely optional** - PHINEAS works perfectly standalone!
 - Security research
 - Personal privacy audits
 
-### ❌ Bad Uses
+### Bad Uses
 - Stalking or harassment
 - Unauthorized surveillance
 - Personal information theft
@@ -382,7 +382,7 @@ pip install -r requirements.txt --force-reinstall
 
 ---
 
-## 🤝 Contributing (Join the Backyard Gang)
+## Contributing (Join the Backyard Gang)
 
 Want to add a new OSINT tool? Here's how:
 
@@ -459,7 +459,7 @@ A: Because we're building the most ambitious OSINT framework anyone has ever see
 
 ---
 
-## 🎬 Final Words
+## Final Words
 
 *"Ferb, I know what we're gonna find today!"*
 
