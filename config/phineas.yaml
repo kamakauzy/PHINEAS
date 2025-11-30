@@ -1,0 +1,88 @@
+# PHINEAS Configuration File
+# Profound HUMINT Intelligence Network & Enrichment Automated System
+
+version: "1.0.0"
+
+# Output configuration
+output_dir: ./phineas-results
+concurrent_scans: 5
+timeout: 300
+retry_failed: true
+max_retries: 2
+
+# API Keys (or use environment variables / system keyring)
+# Leave empty and configure via: phineas setup
+api_keys:
+  shodan:
+    key: ""
+    enabled: false
+  haveibeenpwned:
+    key: ""
+    enabled: false
+  securitytrails:
+    key: ""
+    enabled: false
+  virustotal:
+    key: ""
+    enabled: false
+  hunter:
+    key: ""
+    enabled: false
+  github:
+    key: ""
+    enabled: false
+
+# Plugin configuration
+plugins:
+  enabled:
+    - sherlock
+    - holehe
+    - theharvester
+    - sublist3r
+    - wayback
+  
+  disabled: []
+  
+  # Plugin-specific settings
+  sherlock:
+    timeout_per_site: 10
+    sites_filter: all  # all | popular
+  
+  holehe:
+    only_used: true
+  
+  theharvester:
+    sources:
+      - google
+      - bing
+      - duckduckgo
+    limit: 500
+  
+  sublist3r:
+    bruteforce: false
+    scan_ports: false
+  
+  wayback:
+    limit: 1000
+
+# OPTIONAL: Cronos Integration (if you want to integrate with Cronos platform)
+integrations:
+  cronos:
+    enabled: false
+    db_host: localhost
+    db_port: 5432
+    db_name: cronos
+    db_user: postgres
+    db_password: ""
+
+# Logging configuration
+logging:
+  level: INFO  # DEBUG | INFO | WARNING | ERROR
+  file: phineas.log
+  console: true
+
+# Rate limiting
+rate_limiting:
+  enabled: true
+  requests_per_minute: 60
+  requests_per_hour: 1000

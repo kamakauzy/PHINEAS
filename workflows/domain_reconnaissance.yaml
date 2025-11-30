@@ -1,0 +1,39 @@
+# Domain Reconnaissance Workflow
+# Comprehensive domain and network intelligence
+
+name: domain_reconnaissance
+description: Full spectrum domain reconnaissance and attack surface mapping
+target_type: domain
+
+steps:
+  # Phase 1: Subdomain Enumeration
+  - name: sublist3r
+    description: Fast passive subdomain enumeration
+    timeout: 300
+    priority: high
+    
+  # Phase 2: Email Harvesting
+  - name: theharvester
+    description: Email and subdomain harvesting
+    timeout: 300
+    priority: high
+    config:
+      sources: [google, bing, linkedin]
+      limit: 500
+      
+  # Phase 3: Historical Data
+  - name: wayback
+    description: Historical website snapshots
+    timeout: 90
+    priority: medium
+    config:
+      extract_urls: true
+      timeframe: 5years
+      
+output:
+  formats:
+    - json
+    - html
+    - csv
+  include_raw: true
+  generate_graph: true

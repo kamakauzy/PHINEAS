@@ -1,0 +1,30 @@
+# Username Enumeration Workflow
+# Track digital footprint across social media and platforms
+
+name: username_enumeration
+description: Comprehensive username tracking across platforms
+target_type: username
+
+steps:
+  # Phase 1: Social Media Discovery
+  - name: sherlock
+    description: Search 300+ social networks
+    timeout: 180
+    priority: critical
+    config:
+      timeout_per_site: 10
+      
+  # Phase 2: Email to Account (if email provided)
+  - name: holehe
+    description: Check email accounts
+    timeout: 60
+    priority: high
+    optional: true
+    
+output:
+  formats:
+    - json
+    - html
+    - markdown
+  include_screenshots: false
+  generate_timeline: true

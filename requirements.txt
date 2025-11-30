@@ -1,0 +1,67 @@
+# PHINEAS OSINT Framework Requirements
+# Python 3.9+
+
+# Core dependencies
+requests>=2.31.0
+aiohttp>=3.9.0
+asyncio>=3.4.3
+pyyaml>=6.0
+python-dotenv>=1.0.0
+click>=8.1.0
+rich>=13.0.0
+tabulate>=0.9.0
+jinja2>=3.1.0
+
+# Database
+psycopg2-binary>=2.9.9
+sqlalchemy>=2.0.0
+alembic>=1.12.0
+
+# Data processing
+pandas>=2.0.0
+beautifulsoup4>=4.12.0
+lxml>=4.9.0
+html5lib>=1.1
+
+# Email intelligence
+email-validator>=2.0.0
+dnspython>=2.4.0
+
+# Network/DNS
+python-whois>=0.8.0
+shodan>=1.31.0
+
+# Social media
+tweepy>=4.14.0
+instaloader>=4.10.0
+
+# Credential/breach checking
+pwnedpasswords>=2.0.0
+
+# Metadata extraction
+Pillow>=10.0.0
+PyPDF2>=3.0.0
+
+# Web scraping
+selenium>=4.15.0
+playwright>=1.40.0
+
+# API clients
+censys>=2.2.0
+virustotal-python>=1.0.0
+
+# Utilities
+tqdm>=4.66.0
+colorama>=0.4.6
+python-dateutil>=2.8.0
+validators>=0.22.0
+
+# Export formats
+openpyxl>=3.1.0
+markdown>=3.5.0
+
+# Development
+pytest>=7.4.0
+pytest-asyncio>=0.21.0
+black>=23.0.0
+flake8>=6.1.0

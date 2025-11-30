@@ -1,0 +1,43 @@
+# Email Intelligence Workflow
+# Comprehensive email reconnaissance and breach checking
+
+name: email_intelligence
+description: Deep dive intelligence gathering on email addresses
+target_type: email
+
+steps:
+  # Phase 1: Account Discovery
+  - name: holehe
+    description: Discover accounts associated with email
+    timeout: 60
+    priority: high
+    
+  # Phase 2: Breach Intelligence
+  - name: haveibeenpwned
+    description: Check for data breaches
+    timeout: 30
+    priority: critical
+    
+  # Phase 3: Username Enumeration
+  - name: sherlock
+    description: Find social media profiles using email username
+    timeout: 180
+    priority: medium
+    config:
+      extract_username: true
+      
+  # Phase 4: Domain Analysis
+  - name: theharvester
+    description: Harvest related emails from domain
+    timeout: 180
+    priority: medium
+    config:
+      sources: [google, bing]
+      limit: 200
+      
+output:
+  formats:
+    - json
+    - html
+  include_raw: false
+  deduplicate: true
